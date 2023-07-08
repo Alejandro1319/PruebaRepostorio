@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Conversor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Actividad 10 Introduccion a JS">
+        <meta name="keywords" content="js,script,JavaScript,Conversiones">
+        <meta name="author" content="Jose Alejandro Salas Ibarra">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        
+</head>
+<body style="background: highlight">
+    
+        <div class="container-fluid" >
+            <div class="row">
+                <header  class="col-3 center"  style="background: #e0e0e0" >
+                    
+                    <h1 class="text-info text-center"> Temperaturas</h1>
+                </header>
+                <header  class="col-1 center" ></header>
+                <header  class="col-3 center" style="background: #e0e0e0" >
+                    
+                    <h1 class="text-info text-center"  > Medidas</h1>
+                </header>
+                <header  class="col-1 center" ></header>
+                    <header  class="col-3 center" style="background: #e0e0e0"  >
+                    
+                    <h1 class="text-info text-center" > Monedas</h1>
+                </header> 
+                    
+            </div>
+            <div  class="row" >
+                <section class="col-3 center" style="background: azure" >
+                <div class="form">
+                    <br>
+                    <label for="txtTempe" > Ingresa la temperatura:</label>
+                    <input type="number" id="txtTempe" class="form-control" style="border-color: black"><br>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularKelvin()">Kelvin</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularFahrenheit()">Fahrenheit</button>
+                     <br><br>
+                     <p>Tu conversion da como resultado:</p>
+                     <div id="resultadoTemperatura" class="form-control" style="background: #e0e0e0; height:40px; border-color: black "></div>
+                     <p>Grados Celcius</p>
+                     
+                    </div>
+                    <br>
+                    <p>En esta seccion veras las conversiones de algunas temperaturas a grados celsius</p>
+                    <hr><br>
+                    
+                    <p>Celsius:Unidad de medica de la temperatura proporcionada por Anders Celsius, físico y astrónomo.</p>
+                    <p>Kelvin:Unidad del sistema internacional que se emplea para medir la temperatura. La escala kelvin 
+                     es una escala termométrica absoluta ya que no tiene valores negativos. 0 celsius equivale a 273.15 K.</p>
+                    <p>Fahrenheit:Es una escala de temperatura propuesta por el físico e ingeniero polaco de origen alemán
+                        Daniel Gabriel Fahrenheit en 1724. la formula usada para convertir celsius a Fahrenheit es: (0 °C × 9/5) + 32 = 32 °F.</p>
+                    <img src="img/escalas-de-termperatura-escalas-termometricas.png" alt="" width="300"/>
+                </section>
+                
+                
+                
+                <section class="col-1"></section>
+                
+                
+                
+                <section class="col-3 center" style="background: azure" >
+                <div class="form">
+                    
+                    <label for="txtMedida" > Ingresa la medida:</label>
+                    <input type="number" id="txtMedida" class="form-control" style="border-color: black"><br>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularPulgadas()">Pulgadas</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularPies()">Pies</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularYardas()">Yardas</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularMillas()">Millas</button>
+                     <br><br>
+                     <p>Tu conversion da como resultado:</p>
+                     <div id="resultadoMedida" class="form-control" style="background: #e0e0e0; height:40px; border-color: black "></div>
+                     <p>Centimetros</p>
+                     
+                    </div>
+                    <br>
+                    <p>En esta seccion veras las conversiones de algunas medidas a centimetros</p>
+                    <hr><br>
+                    
+                    <p>Pulgadas: Unidad de medicion equivalente a 2.54 centimetros.</p>
+                    <p>Pies: Unidad de medicion equivalente a 30.48 centimetros.</p>
+                    <p>Yardas: Unidad de medicion equivalente a 91.44 centimetros.</p>
+                    <p>Millas: Unidad de medicion equivalente a 160934.4 centimetros.</p>
+                    <img src="img/medidas.jpg" alt="" width="300"/>
+                </section>
+                  <section class="col-1"></section>
+                  
+                  
+                  <section class="col-3 center" style="background: azure" >
+                <div class="form">
+                    
+                    <label for="txtMoneda" > Ingresa la cantidad:</label>
+                    <input type="number" id="txtMoneda" class="form-control" style="border-color: black"><br>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularDolarUSA()">Dolar USA</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularDolarCAN()">Dolar CAN</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularEuro()">Euro</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularLibraEsterlina()">Libra esterlina</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularPesoChileno()">Peso Chileno</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularPesoUruguayo()">Peso Uruguayo</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularRupia()">Rupia</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularYen()">Yen</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="CalcularZloty()">Zloty</button>
+                     <br><br>
+                     <p>Tu conversion da como resultado:</p>
+                     <div id="resultadoMoneda" class="form-control" style="background: #e0e0e0; height:40px; border-color: black "></div>
+                     <p>Pesos Mexicanos</p>
+                     
+                    </div>
+                    <br>
+                    <p>En esta seccion veras las conversiones de algunas monedas a pesos mexicanos</p>
+                    <hr><br>
+                    
+                    <p>Dolar estadounidense: Moneda estadounidense equivalente a 24.04 pesos Mexicanos.</p>
+                    <p>Dolar Canadiense: Moneda canadiense equivalente a 17.24 pesos Mexicanos.</p>
+                    <p>Euro: Moneda de la Unión Europea equivalente a 26.2 pesos Mexicanos.</p>
+                    <p>Libra Estelina: Moneda del Reino Unido equivalente a 30.05 pesos Mexicanos.</p>
+                    <p>Peso Chileno: Moneda de Chile equivalente a 0.028 pesos Mexicanos.</p>
+                    <p>Peso Uruguayo: Moneda de Uruguay equivalente a 0.56 pesos Mexicanos.</p>
+                    <p>Rupia: Moneda de India equivalente a 0.32 pesos Mexicanos.</p>
+                    <p>Yen: Moneda de Japon equivalente a 0.22 pesos Mexicanos.</p>
+                    <p>Zloty: Moneda de polonia equivalente a 5.78 pesos Mexicanos.</p>
+                    <img src="img/peso.jpg" alt="" width="300"/>
+                    <br><br>
+                   
+            </div>
+            <div  class="row" style="background: maroon; padding: 20px; margin: 10px">
+            <footer class="col-12 center">
+                <h6 class="text-center">Elaborado: Salas Ibarra Jose Alejandro</h6>
+                <h6 class="text-center">Grupo: DSM304</h6>
+                
+                
+                
+            </footer>
+            </div>
+            <script src="JS/Calculos.js" type="text/javascript"></script>
+    </body>
+</html>
